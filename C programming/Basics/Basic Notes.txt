@@ -1,0 +1,59 @@
+#include <stdio.h> is called as pre-processor directive ; preprocessor replaces text starting with # with the actual content such as lib
+This is how c imports before compilation begins.
+
+        Preprocessor             Compiler
+Source code -> Expanded source code -> Machine code
+
+-----
+
+Stdio.h is the standard i/o file, called header file. Contains declarations (prototypes) of functions.
+
+Header files -> Declaration of functions                       C standard library -> Actual definitions of functions
+Header is like a phone number that you can call                C Library is the actual person you can reach
+
+They are fused by linker, for optimization using the difference of interface and implementation.
+
+-----
+
+C Unary Operators – Manual-style Summary
+
+Increment (++) / Decrement (--)
+Increases or decreases a variable's value by 1.
+- Prefix: ++x / --x (modifies before use)
+- Postfix: x++ / x-- (modifies after use)
+
+Unary Plus (+)
+Indicates a positive value. Has no effect on numeric types.
+Example: +x is the same as x.
+
+Unary Minus (-)
+Negates a numeric value. Equivalent to multiplying by -1.
+Example: -x gives the arithmetic negative of x.
+
+Logical NOT (!)
+Inverts a boolean expression.
+- !0 → 1 (true)
+- !nonzero → 0 (false)
+
+Bitwise NOT (~)
+Flips each bit of an integer.
+- ~x produces the bitwise complement.
+
+Address-of Operator (&)
+Returns the memory address of a variable.
+- &x yields a pointer to x.
+
+Indirection Operator (*)
+Dereferences a pointer to access the value it points to.
+- *ptr gives the value at the address stored in ptr.
+
+sizeof Operator
+Returns the size (in bytes) of a variable or type.
+- Evaluated at compile time.
+- Example: sizeof(int) → 4 (on most systems)
+
+Cast Operator (type)
+Explicitly converts a value to a different type.
+- Syntax: (int)x, (float)y
+- Used for type coercion in expressions.
+
