@@ -22,10 +22,10 @@ So we can use this formula for a faster approach
 */
 
 int main() {
-    int a = 2;             // E(n-2)
-    int b = 8;             // E(n-1)
-    int sum = a + b;
-    int next = 4 * b + a;  // E(n)
+    register int a = 2;             // E(n-2)
+    register int b = 8;             // E(n-1)
+    register int sum = a + b;
+    register int next = 4 * b + a;  // E(n)
 
     while (next <= 4000000) {
         sum += next;
