@@ -69,7 +69,7 @@ int main() {
     k = (a = 3, b = 4, a + b);
     printf("result of comma expression: %d\n", k);
 
-    printf("\nointer operators\n");
+    printf("\npointer operators\n");
     int z = 100;
     int* ptr = &z;
     printf("address of z: %p\n", (void*)&z);
