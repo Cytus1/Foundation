@@ -7,7 +7,7 @@ What is the largest prime factor of the number 600851475143?
 Solution:
 Solved by Pollard's Rho.
 The main function is f(x) = (x^2 + 1) mod n, where n is our number.
-Our computation is on d, where d = gcd(|x - y|, n) ; x = f(x),    y = f(f(y))
+Our computation is on d, where d = gcd(|x - y|, n) ; x = f(x),    y = f(f(x))
 
 Example: if we have 91, then we do d = gcd(|x - y|, 91)
 
