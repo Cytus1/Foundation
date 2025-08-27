@@ -31,7 +31,7 @@ void stack_recursion_demo(int depth) {
     }
 }
 
-// dynamic (Heap) allocation --------
+// dynamic (Heap) allocation
 void heap_allocation_demo(size_t n) {
     int *arr = malloc(n * sizeof *arr);
 
