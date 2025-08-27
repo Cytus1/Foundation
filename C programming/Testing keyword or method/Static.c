@@ -10,7 +10,7 @@ int getNum(){
     return num;
 }
 
-int main(){
+int main(void){
     for (int i = 0; i < 3; i++){
         int var = getNum();
         printf("%d\n", var);

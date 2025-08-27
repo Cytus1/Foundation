@@ -17,7 +17,7 @@ void show_static() {
     printf("static counter = %d\n", counter);
 }
 
-int main() {
+int main(void) {
 
     // 1. Declaration + Definition + Initialization
     int normal_var = 42; // Arbitrary integer, test/demo value

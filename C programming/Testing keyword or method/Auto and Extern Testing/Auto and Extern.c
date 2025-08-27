@@ -10,7 +10,7 @@ extern means to find the value where the variable is at another file. this proce
 
 extern int var123;
 
-int main(){
+int main(void){
     auto int var = 0;
     printf("var123 = %d", var123);
     return 0;

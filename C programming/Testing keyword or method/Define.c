@@ -15,7 +15,7 @@ can also define macros
         printf("%d is even\n", (x)); \
 } while(0)
 
-int main() {
+int main(void) {
     printf("%d\n", value);
     printf("1 + 2 = %d\n", add(1, 2));
     printf("10 * (1 + 2) = %d\n", 10 * add(1, 2));

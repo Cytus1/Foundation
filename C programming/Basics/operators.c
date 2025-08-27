@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     printf("arithmetic operators\n");
     int a = 10, b = 3;
     printf("addition: a + b = %d\n", a + b);
