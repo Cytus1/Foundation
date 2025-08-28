@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-// new idea: pointer to a pointer, but not enough knowledge yet to complete
+// new idea: pointer to a pointer
 
 
 struct Node {

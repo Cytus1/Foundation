@@ -1,17 +1,16 @@
 #include <stdio.h>
 
 
-struct linkedlist {
+struct Node {
     int number;
     struct Node* next;
 };
 
 
-
 int main(void) {
-    struct linkedlist node1;
-    struct linkedlist node2;
-    struct linkedlist node3;
+    struct Node node1;
+    struct Node node2;
+    struct Node node3;
 
     node1.number = 1;
     node2.number = 2;
@@ -21,7 +20,7 @@ int main(void) {
     node2.next = &node3;
     node3.next = NULL;
 
-    struct linkedlist* current = &node1;
+    struct Node* current = &node1;
     while (current != NULL) {
         printf("%d\n", current -> number);
         current = current -> next;
