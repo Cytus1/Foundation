@@ -1,6 +1,8 @@
 #include <stdio.h> 
 
 /*
+I got a big portion of this from Neso academy
+and the book Computer System a programmer's perspective third edition
 Declaration: property of variable to compiler.
 Properties:  size, name.
 Definition:  allocating memory to a variable.
@@ -20,7 +22,7 @@ void show_static() {
 int main(void) {
 
     // 1. Declaration + Definition + Initialization
-    int normal_var = 42; // Arbitrary integer, test/demo value
+    int normal_var = 42; // test/demo value
     printf("normal_var = %d\n", normal_var);
 
     // 2. Constant variable (read only after initialization)
