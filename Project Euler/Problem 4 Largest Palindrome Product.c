@@ -10,7 +10,7 @@ So we can say N = 100001*a + 10010*b + 1100*c, where a can not by 0.
 
 
 int isPalindrome(int n) {
-    register int rev = 0, temp = n; // deepcopy because pass by reference, rev for reverse
+    register int rev = 0, temp = n; // deepcopy because pass by value, rev for reverse
     while (temp) {
         register rev = rev * 10 + temp % 10;
         temp /= 10;
