@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/*
+the struct keyword is used to define a structure,
+which is a user-defined data type that groups related
+variables (of potentially different types) under a single name.
+*/
+
 struct myStruct {
     int age;
     char myString [10];

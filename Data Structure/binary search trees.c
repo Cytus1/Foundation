@@ -70,7 +70,7 @@ int main (void){
 
 
     a.left = &b;    a.right = &c;
-    b.left = &d;    b.right = NULL;
+    b.left = &d;    b.right = NULL; 
     c.left = NULL;  c.right = NULL;
     d.left = NULL;  d.right = NULL;
 
