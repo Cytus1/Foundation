@@ -43,15 +43,48 @@ struct Queue* createQueue() {
     return q;
 }
 
+void peek(struct Queue*q){
+    if (q -> front == -1) {printf("this queue is empty"); return;}
+    printf("peek result: ", q -> front);
+}
+
+bool isFull(struct Queue* q){
+    return ((q -> rear + 1) % MAX == q -> front);
+}
+
+bool isEmpty(struct Queue* q){
+    return (q -> front == -1);
+}
+
 /*
 note: rear = -1, so we can add 1 at beginning for 0, which fits.
 and using % MAX, we can go from max to 0 as the remainder's behavior
 */
 void enqueue(struct Queue* q, int value){
-    if ((q -> rear + 1) % MAX == q -> front)   {printf("q is full\n"); return;}
+    if (isFull(q) == true)   {printf("q is full\n"); return;}
     if (q -> front == -1) {q -> front = 0;}
     q -> rear = (q -> rear + 1) % MAX;
     q -> nums[q -> rear] = value;
+}
+
+void dequeue(struct Queue* q){
+    if(isEmpty(q)){
+        printf("queue is empty\n");
+        return;
+    }
+    
+    printf("%d going to be removed\n", q -> nums[q -> front]);
+
+    if(q -> front == q -> rear){
+        q -> front = -1;
+        q -> rear = -1;
+        printf("queue is empty\n");
+    }
+    else {
+        q -> front = (q->front + 1) % MAX;
+    }
+
+    printf("success\n");
 }
 
 
@@ -75,9 +108,6 @@ void PrintQ(struct Queue* q){
     printf("\n");
 }
 
-bool isEmpty (struct Queue* q){
-    return (q -> front == -1);
-}
 
 int main(void){
     struct Queue* q = createQueue();
