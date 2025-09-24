@@ -29,6 +29,7 @@ void push(struct Stack* Stack, int data){
 I realize that you can pop by removal, but there is no need to;
 You can overwrite them automatically each time you push anyways.
 */
+
 void pop(struct Stack* Stack){
     if (isEmpty (Stack)) {printf("Empty stack\n"); return;}
     // Stack -> items[Stack -> top] = NULL;
