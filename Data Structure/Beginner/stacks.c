@@ -15,8 +15,8 @@ struct Stack* createStack() {
     return Stack;
 }
 
-bool isEmpty(struct Stack* s) { return s->top == -1; }
-bool isFull (struct Stack* s) { return s->top == MAXSIZE - 1; }
+bool isEmpty(struct Stack* s) { return s -> top == -1; }
+bool isFull (struct Stack* s) { return s -> top == MAXSIZE - 1; }
 
 void push(struct Stack* Stack, int data){
     if (isFull (Stack)) {printf("Full stack\n"); return;}
