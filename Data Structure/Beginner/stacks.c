@@ -16,20 +16,20 @@ struct Stack* createStack() {
 }
 
 bool isEmpty(struct Stack* Stack){
+    printf("the stack is empty");
     return Stack -> top == -1;
 }
 
 bool isFull(struct Stack* Stack){
+    printf("the stack is full");
     return Stack -> top == MAXSIZE - 1;
 }
 
 void push(struct Stack* Stack, int data){
-    if      (isEmpty(Stack)) {return;}
-    else if (isFull (Stack)) {return;}
-    else {
-        Stack -> top = Stack -> top++;
-        Stack -> items[Stack -> top] = data;
-    }
+    if (isFull (Stack)) {return;}
+    //Note: can't do Stack -> top = Stack -> top++;
+    Stack -> top++;
+    Stack -> items[Stack -> top] = data;
 }
 
 void peek(struct Stack* Stack){
