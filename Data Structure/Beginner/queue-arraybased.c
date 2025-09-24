@@ -101,9 +101,9 @@ void PrintQ(struct Queue* q){
     int i = q -> front;
 
     do {
-        printf("%d ", q->nums[i]);
+        printf("%d ", q -> nums[i]);
         i = (i + 1) % MAX;
-    } while (i != (q->rear + 1) % MAX);
+    } while (i != (q -> rear + 1) % MAX);
 
     printf("\n");
 }
