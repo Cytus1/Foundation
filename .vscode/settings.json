@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "vEBtree.C": "cpp"
+        "vEBtree.C": "cpp",
+        "array": "cpp"
     }
 }
