@@ -1,0 +1,7 @@
+Core Arch
+
+Data Type
+
+Instruction and Operands have 3 type: Immediate, Register, and Memory
+
+Memory Addressing : EffectiveAddress = BaseReg + indexReg * ScaleFactor + Displacement
