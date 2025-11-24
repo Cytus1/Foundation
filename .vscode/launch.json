@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run MSVC Program",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\01main.exe",
+            "cwd": "${fileDirname}",
+            "args": [],
+            "stopAtEntry": false,
+            "environment": [],
+            "externalConsole": true,
+            "preLaunchTask": "Build MASM + MSVC"
+        }
+    ]
+}
