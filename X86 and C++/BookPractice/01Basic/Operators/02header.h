@@ -1,3 +1,6 @@
+#pragma once
+
+
 extern "C" unsigned int LogicGateU32_a(
     unsigned int a,
     unsigned int b

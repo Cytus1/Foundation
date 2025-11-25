@@ -1,0 +1,66 @@
+Windows x64 calling convention:
+RCX = first parameter  (unsigned int a)
+RDX = second parameter (unsigned int b)
+RAX = return value
+
+The first 4 argument is saved correponding to:
+
+ECX, EDX, R8D, R9D.
+
+Furthermore, it will be at stack of rsp.
+Example:
+0x40 arg5
+0x48 arg6
+
+( I think )
+The rule is rsp + 0x20 + (argnum * 8) 
+( I will find out its wrong when I get error in future )
+
+Register usage:
+RAX = accumulator (stores the final combined result)
+RBX = temporary register used to compute a single gate output
+
+I use bitwise since we are doing U32 hex value.
+Note: you can put or on each line for bitwise or on all values.
+
+1. AND a & b
+        mov rax, rcx        ; RAX = a
+        and rax, rdx        ; RAX = a AND b
+
+2. OR a | b
+        mov rbx, rcx
+        or  rbx, rdx        ; RBX = a | b
+        or  rax, rbx        ; result |= a OR b
+
+3. XOR a ^ b
+        mov rbx, rcx
+        xor rbx, rdx        ; RBX = a ^ b
+        or  rax, rbx        ; result |= XOR ab
+
+4. NOT ~a
+        mov rbx, rcx
+        not rbx             ; RBX = ~a
+        or  rax, rbx        ; result |= NOT a
+
+5. NOT ~b
+        mov rbx, rdx
+        not rbx             ; RBX = ~b
+        or  rax, rbx        ; result |= NOT b
+
+6. NAND ~(a & b)
+        mov rbx, rcx
+        and rbx, rdx        ; RBX = a & b
+        not rbx             ; RBX = ~(a & b)
+        or  rax, rbx        ; result |= NAND ab
+
+7. NOR ~(a | b)
+        mov rbx, rcx
+        or  rbx, rdx        ; RBX = a | b
+        not rbx             ; RBX = ~(a | b)
+        or  rax, rbx        ; result |= NOR ab
+
+8. XNOR ~(a ^ b)
+        mov rbx, rcx
+        xor rbx, rdx        ; RBX = a ^ b
+        not rbx             ; RBX = ~(a ^ b)
+        or  rax, rbx        ; result |= XNOR ab

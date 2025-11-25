@@ -6,9 +6,10 @@
             "type": "shell",
             "command": "cmd.exe",
             "args": [
-                "/c",
-                "ml64 /c 01AddSubfasm.asm && cl /EHsc 01main.cpp 01misc.cpp 01AddSubfasm.obj"
+            "/c",
+            "for %i in (*.asm) do ml64 /c %i & cl /EHsc *.cpp /link *.obj /IGNORE:4042 /OUT:${fileBasenameNoExtension}.exe"
             ],
+
             "options": {
                 "cwd": "${fileDirname}"
             },
